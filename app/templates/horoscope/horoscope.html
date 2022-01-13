@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'horoscope/base.html' %}
 
 {% block body %}
     <div class="b-example-divider"></div>
@@ -7,7 +7,7 @@
     <div class="py-5">
         <div class="col-lg-6 mx-auto">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <h1 style="color:#00FF7F">Новый гороскоп успешно добавлен!</h1>
+                <h1 style="color:#00FF7F">{{ horoscope_info.text }}</h1>
             </div>
         </div>
     </div>
