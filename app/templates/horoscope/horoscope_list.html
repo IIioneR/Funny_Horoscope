@@ -1,0 +1,26 @@
+{% extends 'horoscope/base.html' %}
+
+{% block body %}
+    <div class="b-example-divider"></div>
+
+    <div class="py-3">
+        <div class="col-lg-6 mx-auto">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <div class="alert alert-info">
+                {% for el in horoscope_list %}
+                <p style="color:#191970; line-break: anywhere;" >{{ el.id }}. {{ el.text }}
+                    <a href="/horoscope/{{ el.id }}/delete" class="btn btn-danger" style="float: right;" >Удалить</a>
+                    <a href="/horoscope/{{ el.id }}/update" class="btn btn-success" style="float: right;" >Редактировать</a>
+                    </p>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-example-divider mb-0"></div>
+
+
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+{% endblock %}
