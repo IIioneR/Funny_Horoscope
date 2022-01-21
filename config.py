@@ -5,7 +5,7 @@ class Config(object):
     DEBUG = False
     CSRF_ENABLED = True
     SECRET_KEY = 'YOUR_RANDOM_SECRET_KEY'
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///horoscope.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 

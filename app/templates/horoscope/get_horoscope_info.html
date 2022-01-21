@@ -7,14 +7,7 @@
         <div class="col-lg-6 mx-auto">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <div class="alert alert-info">
-            <form method="post" action="horoscope/horoscope_list">
-                {% for el in horoscope_list %}
-                <p style="color:#191970; line-break: anywhere;" >{{ el.id }}. {{ el.text }}
-                    <a href="/api/{{ el.id }}/d" class="btn btn-danger" style="float: right;" >Удалить</a>
-                    <a href="/api/{{ el.id }}/u" class="btn btn-success" style="float: right;" >Редактировать</a>
-                    </p>
-                    </form>
-                {% endfor %}
+                <p style="color:#191970; line-break: anywhere;" >{{ horoscope_info.text }}</p>
                 </div>
             </div>
         </div>
